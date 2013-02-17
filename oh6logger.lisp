@@ -178,4 +178,6 @@ COMMIT;
     ;; run action if not null
     ;; leave loop if result of action not 0
     #+SBCL
-    (if old-tz (sb-posix::setenv "TZ" old-tz 1) (sb-posix::unsetenv "TZ"))))
+    (if old-tz
+	(sb-posix::setenv "TZ" old-tz 1)
+	(sb-posix::unsetenv "TZ"))))
